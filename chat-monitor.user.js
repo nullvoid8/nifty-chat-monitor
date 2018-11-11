@@ -280,7 +280,7 @@ function actionFunction() {
                         newNode.dataset.badges = badges.join(',');
 
                         //add data-message=<message> for keyword-based highlighting
-                        var message = newNode.querySelector("span[data-a-target='chat-message-text']");
+                        var message = newNode.querySelector("span[data-a-target='chat-message-text'], span[data-a-target='chat-message-mention']");
                         if (message) {
                             newNode.dataset.message = message.textContent.replace(/(\r|\s{2,})/gm," ").trim().toLowerCase();
                         } else if (newNode.querySelector('.chat-image')) {
